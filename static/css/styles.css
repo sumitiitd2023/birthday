@@ -1,0 +1,89 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    background: linear-gradient(to right, #83a4d4, #b6fbff); /* New background theme */
+}
+
+.gallery {
+    width: 20%;
+    height: 60%;
+    overflow-y: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f0f8ff; /* Light background for gallery */
+}
+
+.gallery img {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 5px #000000;
+}
+
+.invitation {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fefbd8; /* Soft yellow background */
+    border-radius: 50%; /* Keeps the oval shape */
+    writing-mode: horizontal-tb; /* Text flows top to bottom */
+    transform: rotate(0deg); /* Flips the text direction */
+    font-size: 24px; /* Adjust the font size as needed */
+}
+
+
+.invitation h1 {
+    font-size: 36px; /* Larger font size for the main title */
+    margin-bottom: 20px; /* Spacing below the title */
+}
+
+.invitation p {
+    margin: 10px 0; /* Consistent spacing between paragraphs */
+}
+
+.balloon {
+    width: 50px;
+    height: 65px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: -75px;
+    animation: float 15s linear infinite;
+}
+
+@keyframes float {
+    to { transform: translateY(-100vh) translateX(20vw); }
+}
+
+.balloon::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 1px;
+    height: 50px;
+    background: #666;
+    transform: translateX(-50%);
+}
+.balloon:nth-child(odd) { animation-duration: 3s; }
+.balloon:nth-child(even) { animation-duration: 5s; }
+
+.audio-container {
+    position: fixed; /* Or absolute, depending on your layout needs */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    z-index: 100; /* Ensure it's above other elements */
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advik's First Birthday</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <div class="gallery">
+        <!-- Gallery images -->
+        <img src="{{ url_for('static', filename='img1.jpg') }}" alt="Gallery Image 1" style="display: block;">
+        <img src="{{ url_for('static', filename='img2.jpg') }}" alt="Gallery Image 2">
+        <img src="{{ url_for('static', filename='img3.jpg') }}" alt="Gallery Image 3">
+        <!-- Add more images as needed -->
+    </div>
+
+
+    <div class="invitation">
+        <h1>Happy 1st Birthday, Advik!</h1>
+        <p>You're warmly invited to join us as we celebrate Advik's first trip around the sun! 🎉</p>
+        <p><strong>Date:</strong> Tuesday, 23 April 2024</p>
+        <p><strong>Time:</strong> 7:00 PM Onwards</p>
+        <p><strong>Venue:</strong> Bishnoi Dharamshala, Krishnapuri Linepar, Moradabad</p>
+<!--        <p>Come for an evening filled with laughter, joy, and cake as we mark this special milestone in Advik's life. Let's make memories that will last a lifetime!</p>-->
+<!--        <p><strong>Dress Code:</strong> Casual & Colorful 🌈</p>-->
+        <p>With love,</p>
+        <p>Dada & Dadi: Suresh Chandra & Mala Rani</p>
+        <p>Papa & Mummy: Rahul Kumar & Sangeeta Kumari</p>
+        <p>Tau & Tai: Amit Kumar & Pooja Rani</p>
+        <p>Tau & Tai: Sumit Kumar & Shatabdi Kundu</p>
+        <p>Fufa & Bua:  & Anita Kumari</p>
+        <p>Fufa & Bua: Abhinav Kumar & Sunita Kumari</p>
+    </div>
+<!--    <div class="invitation">-->
+<!--        <h1>Happy 1st Birthday, Advik!</h1>-->
+<!--        <p>Date: <strong>23 April 2024</strong></p>-->
+<!--        <p>Venue: <strong>Bishnoi Dharamshala Krishnapuri Linepar Moradabad</strong></p>-->
+<!--        <p>Grandparents: Suresh Chandra & Mala Rani</p>-->
+<!--        <p>Parents: Rahul Kumar & Sangeeta Kumari</p>-->
+<!--        <p>Tau & Tai: Amit Kumar & Pooja Rani</p>-->
+<!--        &lt;!&ndash; Additional details &ndash;&gt;-->
+<!--    </div>-->
+</div>
+
+<!-- Balloons -->
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<!-- More balloons as desired -->
+
+    <!-- Place this at the end of your <body> tag in index.html -->
+<div class="audio-container">
+    <audio controls autoplay loop>
+        <source src="{{ url_for('static', filename='song.mp3') }}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
