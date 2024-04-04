@@ -15,8 +15,15 @@
         <img src="{{ url_for('static', filename='img2.jpg') }}" alt="Gallery Image 2">
         <img src="{{ url_for('static', filename='img3.jpg') }}" alt="Gallery Image 3">
         <!-- Add more images as needed -->
+        <audio controls autoplay loop>
+            <source src="{{ url_for('static', filename='song.mp3') }}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
     </div>
+<!--        &lt;!&ndash; Place this at the end of your <body> tag in index.html &ndash;&gt;-->
+<!--    <div class="audio-container">-->
 
+<!--    </div>-->
 
     <div class="invitation">
         <h1>Happy 1st Birthday, Advik!</h1>
@@ -24,15 +31,14 @@
         <p><strong>Date:</strong> Tuesday, 23 April 2024</p>
         <p><strong>Time:</strong> 7:00 PM Onwards</p>
         <p><strong>Venue:</strong> Bishnoi Dharamshala, Krishnapuri Linepar, Moradabad</p>
-<!--        <p>Come for an evening filled with laughter, joy, and cake as we mark this special milestone in Advik's life. Let's make memories that will last a lifetime!</p>-->
-<!--        <p><strong>Dress Code:</strong> Casual & Colorful 🌈</p>-->
-        <p>With love,</p>
-        <p>Dada & Dadi: Suresh Chandra & Mala Rani</p>
-        <p>Papa & Mummy: Rahul Kumar & Sangeeta Kumari</p>
-        <p>Tau & Tai: Amit Kumar & Pooja Rani</p>
-        <p>Tau & Tai: Sumit Kumar & Shatabdi Kundu</p>
-        <p>Fufa & Bua:  & Anita Kumari</p>
-        <p>Fufa & Bua: Abhinav Kumar & Sunita Kumari</p>
+        <p><strong>With love,</strong></p>
+        <p>Dadi & Dada: Suresh Chandra & Mala Rani</p>
+        <p>Mummy & Papa: Rahul Kumar & Sangeeta Kumari</p>
+        <p> Tai & Tau: Amit Kumar & Pooja Rani</p>
+        <p>Tai & Tau: Sumit Kumar & Shatabdi Kundu</p>
+        <p>Bua & Fufa:  & Anita Kumari</p>
+        <p>Bua & Fufa: Abhinav Kumar & Sunita Kumari</p>
+        <p>Sister & Brother: Kavya & Badri</p>
     </div>
 <!--    <div class="invitation">-->
 <!--        <h1>Happy 1st Birthday, Advik!</h1>-->
@@ -51,15 +57,12 @@
 <div class="balloon"></div>
 <div class="balloon"></div>
 <div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
 <!-- More balloons as desired -->
-
-    <!-- Place this at the end of your <body> tag in index.html -->
-<div class="audio-container">
-    <audio controls autoplay loop>
-        <source src="{{ url_for('static', filename='song.mp3') }}" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-</div>
 
 
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>

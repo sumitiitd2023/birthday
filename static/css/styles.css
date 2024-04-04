@@ -2,23 +2,25 @@ body, html {
     height: 100%;
     margin: 0;
     overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 .container {
     display: flex;
-    flex-direction: row;
     height: 100%;
-    background: linear-gradient(to right, #83a4d4, #b6fbff); /* New background theme */
+    /*background: linear-gradient(to right, #83a4d4, #b6fbff); /* New background theme */
+    background-image: url('../bg.jpg'); /* Background image for invitation */
+    background-size: cover; /* Cover the entire container */
 }
 
 .gallery {
-    width: 20%;
-    height: 60%;
-    overflow-y: auto;
+    width: 25%; /* Occupy 20% of the width */
+    height: 78%; /* Adjust height based on content */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
     padding: 10px;
     box-sizing: border-box;
     background-color: #f0f8ff; /* Light background for gallery */
+    border-right: 2px solid #ccc; /* Add right border */
+    background-image: url('../bg.jpg'); /* Background image for gallery */
 }
 
 .gallery img {
@@ -29,30 +31,31 @@ body, html {
 }
 
 .invitation {
-    width: 80%;
-    height: 100%;
+    width: 75%; /* Occupy 80% of the width */
+    height: auto; /* Adjust height based on content */
     display: flex;
     flex-direction: column; /* Align items vertically */
     justify-content: center; /* Center items vertically */
     align-items: center; /* Center items horizontally */
-    overflow-y: auto;
+    overflow-y: auto; /* Enable vertical scrolling if needed */
     padding: 20px;
     box-sizing: border-box;
     background-color: #fefbd8; /* Soft yellow background */
-    border-radius: 50%; /* Keeps the oval shape */
-    writing-mode: horizontal-tb; /* Text flows top to bottom */
-    transform: rotate(0deg); /* Flips the text direction */
-    font-size: 24px; /* Adjust the font size as needed */
+    border-radius: 10px; /* Add border radius */
+    border: 2px solid #ccc; /* Add border */
+    font-size: 20px; /* Increase font size */
+    background-image: url('../bg.jpg'); /* Background image for invitation */
+    background-size: cover; /* Cover the entire container */
 }
 
-
 .invitation h1 {
-    font-size: 36px; /* Larger font size for the main title */
+    font-size: 40px; /* Larger font size for the main title */
     margin-bottom: 20px; /* Spacing below the title */
 }
 
 .invitation p {
     margin: 10px 0; /* Consistent spacing between paragraphs */
+    font-size: 20px; /* Increase font size */
 }
 
 .balloon {
@@ -78,12 +81,45 @@ body, html {
     background: #666;
     transform: translateX(-50%);
 }
-.balloon:nth-child(odd) { animation-duration: 3s; }
-.balloon:nth-child(even) { animation-duration: 5s; }
+
+.balloon:nth-child(odd) { animation-duration: 4s; }
+.balloon:nth-child(even) { animation-duration: 6s; }
+
+/* Existing styles remain unchanged */
 
 .audio-container {
-    position: fixed; /* Or absolute, depending on your layout needs */
-    bottom: 20px; /* Distance from the bottom */
-    right: 20px; /* Distance from the right */
-    z-index: 100; /* Ensure it's above other elements */
+    position: relative; /* Change to relative positioning */
+    width: 20%; /* Occupy full width */
+    box-sizing: border-box;
+    padding: 20px; /* Add padding for spacing */
 }
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Change to column layout for mobile */
+    }
+
+    .gallery {
+        width: 100%; /* Occupy full width on mobile */
+        border-right: none; /* Remove right border on mobile */
+        margin-bottom: 20px; /* Add bottom margin for spacing */
+    }
+
+    .invitation {
+        width: 100%; /* Occupy full width on mobile */
+        font-size: 18px; /* Adjust font size for smaller screens */
+        border: 2px solid #ccc; /* Add border */
+    }
+
+    .audio-container {
+        position: relative; /* Change to relative positioning */
+        width: 20%; /* Occupy full width */
+        box-sizing: border-box;
+        padding: 20px; /* Add padding for spacing */
+    }
+}
+
+
+
+
